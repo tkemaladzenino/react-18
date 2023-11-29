@@ -1,0 +1,101 @@
+ header {
+
+     border-radius: 30px;
+     margin-top: 20px;
+     background-color: rgb(101, 111, 118);
+ }
+
+ .menu {
+     list-style: none;
+     padding: 0;
+     padding-left: 10px;
+     text-align: center;
+     color: rgb(225, 242, 225);
+ }
+
+ .menu li {
+     display: inline-block;
+     margin-right: 20px;
+     list-style: none;
+     padding: 0;
+     text-align: center;
+
+
+     font-family: Poppins;
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 24px;
+     letter-spacing: 0em;
+     text-align: left;
+ }
+
+
+ .ellipse-d {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     background-color: rgb(231, 208, 208);
+     color: rgb(149, 11, 11);
+     font-size: 12px;
+     border: 1px solid rgb(23, 22, 22);
+     font-weight: 700;
+ }
+
+ .our-text {
+
+     font-family: Inter;
+     font-size: 36px;
+     font-weight: 700;
+     line-height: 44px;
+     letter-spacing: 0em;
+     text-align: center;
+     color: #1E1D1D;
+ }
+
+ /*----------      product-div-----------*/
+
+
+
+ .product {
+     border: 1px solid #ccc;
+     padding: 20px;
+     height: 100%;
+     margin: 4px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+
+
+
+ .product img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .info {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+     margin-top: 10px;
+ }
+
+ .rating {
+     color: black;
+ }
+
+ .title {
+     font-weight: bold;
+ }
+
+ .price {
+     display: flex;
+     justify-content: center;
+     color: black;
+
+ }
