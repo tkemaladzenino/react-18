@@ -66,10 +66,8 @@
      margin: 4px;
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
+
  }
-
-
 
 
  .product img {
@@ -86,16 +84,18 @@
  }
 
  .rating {
-     color: black;
+     color: rgb(112, 7, 7);
+     font-weight: bold;
+     font-size: 18px;
  }
 
  .title {
      font-weight: bold;
+     font-size: 20px;
  }
 
  .price {
-     display: flex;
-     justify-content: center;
-     color: black;
-
+     color: rgb(6, 73, 25);
+     font-weight: bold;
+     font-size: 18px;
  }
