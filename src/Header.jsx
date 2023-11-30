@@ -1,14 +1,19 @@
 
 // Header.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import heart from './images/hart.png';
 import cart from './images/icon3.png';
 import "./css/style.css";
 
-
-
 function Header() {
+    const [selectedProducts, setSelectedProducts] = useState(0);
+
+    // Update selectedProducts when a product is added in Main component
+    const updateSelectedProducts = (count) => {
+        setSelectedProducts(count);
+    };
+
     return (
         <div className="container-fluid layout-body">
             <header className="hdr d-flex flex-row gap align-items-center px-5" style={{ justifyContent: 'space-between' }}>
@@ -36,7 +41,7 @@ function Header() {
 
                         <div className="ellipse-d" style={{ position: 'absolute', right: '60px', zIndex: 9 }}>
                             <span id="span1" style={{ position: 'absolute', zIndex: 2 }}>
-                                0
+                                {selectedProducts}
                             </span>
                         </div>
                         <img src={cart} style={{ paddingLeft: '6px', height: "40px" }} alt="github" />
