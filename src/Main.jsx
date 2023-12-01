@@ -3,18 +3,17 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Outlet, Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import "./css/style.css";
 
 import wish from './images/wish.png';
 import hart from './images/hart.png';
 
-function Main(props) {
+function Main({ updateSelectedProducts }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const navigate = useNavigate();
-    const [selectedProducts, setSelectedProducts] = useState(0); // New state for selected products
+
+    const [selectedProducts] = useState(0); // New state for selected products
 
 
     useEffect(() => {
@@ -23,33 +22,17 @@ function Main(props) {
                 const productsData = response.data.products; // Access the "products" key in the response
                 setProducts(productsData);
                 setLoading(false);
-
             })
-            .catch(error => {
-                console.error('Error fetching products:', error);
-                console.log('Error response:', error.response);
-                setError(error);
-                setLoading(false);
-            });
+
     }, []);
 
     const handleWishClick = () => {
         // Increment the selected products count on "Wish" click
-        props.updateSelectedProducts(selectedProducts + 1);
+        updateSelectedProducts(selectedProducts + 1);
     };
-
-    const handleDetailsClick = (productId) => {
-        // Navigate to the product details page
-        navigate(`/product/${productId}`);
-    };
-
 
     if (loading) {
         return <p>Loading...</p>;
-    }
-
-    if (error || !Array.isArray(products)) {
-        return <p>Error fetching products. Please try again later.</p>;
     }
 
     const rows = [];
@@ -82,7 +65,7 @@ function Main(props) {
                                     {/* Link to ProductDetails */}
 
                                 </div>
-                                <div className="two d-flex justify-content-end gap-1" style={{ position: 'absolute;', top: '200px', right: '0', zIndex: '7' }}>
+                                <div className="two d-flex justify-content-end gap-1" >
                                     <div className="img1" onClick={handleWishClick}>
                                         <img src={wish} style={{ height: "40px" }} alt="github" />
                                     </div>

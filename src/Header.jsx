@@ -22,14 +22,12 @@ function Header() {
                     <li>Home
                     </li>
                     <li> Recent Products</li>
-
                     <li>Contact
                     </li>
                     <li>
                         About
                     </li>
                 </ul>
-
                 <div className="icons d-flex flex-row gap-1">
                     <div className="icon1-div">
                         <img src={heart} style={{ paddingLeft: '6px', height: "40px", color: 'red' }} alt="github" />
@@ -44,6 +42,7 @@ function Header() {
                                 {selectedProducts}
                             </span>
                         </div>
+
                         <img src={cart} style={{ paddingLeft: '6px', height: "40px" }} alt="github" />
                     </div>
                 </div>
