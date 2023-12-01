@@ -78,6 +78,8 @@ function Main(props) {
                                     <div className="price">${product.price}</div>
                                     <div className="rating">{product.rating}</div>
 
+                                    <Link to={`/product/${product.id}`}>Details ...</Link>
+                                    {/* Link to ProductDetails */}
 
                                 </div>
                                 <div className="two d-flex justify-content-end gap-1" style={{ position: 'absolute;', top: '200px', right: '0', zIndex: '7' }}>
