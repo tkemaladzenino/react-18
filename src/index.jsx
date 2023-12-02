@@ -13,8 +13,8 @@ import ProductDetails from './ProductDetails';
 const App = () => {
     const [selectedProducts, setSelectedProducts] = useState(0);
 
-    const updateSelectedProducts = (count) => {
-        setSelectedProducts(count);
+    const updateSelectedProducts = () => {
+        setSelectedProducts(prevSelectedProducts => prevSelectedProducts + 1);
     };
     return (
         <Router>

@@ -13,8 +13,6 @@ function Main({ updateSelectedProducts }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const [selectedProducts] = useState(0); // New state for selected products
-
 
     useEffect(() => {
         axios.get('https://dummyjson.com/products')
@@ -23,12 +21,12 @@ function Main({ updateSelectedProducts }) {
                 setProducts(productsData);
                 setLoading(false);
             })
-
     }, []);
 
     const handleWishClick = () => {
-        // Increment the selected products count on "Wish" click
-        updateSelectedProducts(selectedProducts + 1);
+
+        // Call the updateSelectedProducts prop to update the count in the Header
+        updateSelectedProducts();
     };
 
     if (loading) {
