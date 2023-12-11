@@ -1,6 +1,6 @@
 
 // Header.jsx
-import React, { useState } from 'react';
+
 import { Outlet } from 'react-router-dom';
 import heart from './images/hart.png';
 import cart from './images/icon3.png';
@@ -14,11 +14,7 @@ function Header({ selectedProducts }) {
                 <ul className="menu d-none d-md-block d-lg-block d-flex pt-3">
                     <li>Home
                     </li>
-                    <li> Recent Products</li>
                     <li>Contact
-                    </li>
-                    <li>
-                        About
                     </li>
                 </ul>
                 <div className="icons d-flex flex-row gap-1">

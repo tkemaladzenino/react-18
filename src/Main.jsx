@@ -1,6 +1,4 @@
 
-//Main.jsx
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, Outlet } from 'react-router-dom';
@@ -12,7 +10,6 @@ import hart from './images/hart.png';
 function Main({ updateSelectedProducts }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-
 
     useEffect(() => {
         axios.get('https://dummyjson.com/products')

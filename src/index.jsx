@@ -8,8 +8,6 @@ import Main from './Main';
 import ProductDetails from './ProductDetails';
 
 
-
-
 const App = () => {
     const [selectedProducts, setSelectedProducts] = useState(0);
 
@@ -37,7 +35,6 @@ const App = () => {
 };
 
 export default App;
-
 
 var root = document.getElementById("root");
 ReactDOM.createRoot(root).render(<App />);
